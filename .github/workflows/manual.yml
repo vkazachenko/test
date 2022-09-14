@@ -25,5 +25,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
+      id: greet
       run: |
           echo "Hello $TASK"
