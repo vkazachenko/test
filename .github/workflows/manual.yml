@@ -27,7 +27,7 @@ jobs:
     - name: config
       id: config
       run: |
-          PATH=${github.event.inputs.environment}
+          PATH=$ENV
     - name: Send greeting
       id: greet
       run: |
