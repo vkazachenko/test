@@ -32,4 +32,4 @@ jobs:
     - name: Send greeting
       id: greet
       run: |
-          echo "Hello ,$PATH, ${PATH}, $PATH1, ${PATH1} "
+          echo "Hello $PATH2 '${PATH2}'
