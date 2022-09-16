@@ -28,8 +28,8 @@ jobs:
       id: config
       run: |
           PATH2=$ENV
-          echo "Hello ,$PATH2"
+          echo "Hello $PATH2"
     - name: Send greeting
       id: greet
       run: |
-          echo "Hello $PATH2 '${PATH2}'
+          echo "Hello $PATH2 '${PATH2}'"
