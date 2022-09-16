@@ -25,6 +25,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: config
+      id: config
       run: |
           PATH=${github.event.inputs.environment}
     - name: Send greeting
