@@ -27,5 +27,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       id: greet
+      env:
+        PATH: '${{ secrets.PATH }}'
+        PATH1: ${{ secrets.PATH }}
       run: |
-          echo "Hello $PATH"
+          echo "Hello ,$PATH, ${PATH}, $PATH1, ${PATH1} "
