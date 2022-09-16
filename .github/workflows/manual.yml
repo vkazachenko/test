@@ -27,7 +27,7 @@ jobs:
     - name: config
       id: config
       run: |
-          if [ $ENV -eq dev ]
+          if [ $ENV = 'dev' ]
           then
             PATH2='test1'
           else
