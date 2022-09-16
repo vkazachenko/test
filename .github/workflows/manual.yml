@@ -16,7 +16,6 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     env:
-      PATH: '${{ secrets.PATH }}'
       ENV: ${{ github.event.inputs.environment }}
       TASK: test-${{ github.event.inputs.environment }}
     # The type of runner that the job will run on
@@ -25,10 +24,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      id: greet
-      env:
+    - name: config
+      with:
         PATH: '${{ secrets.PATH }}'
         PATH1: ${{ secrets.PATH }}
+    - name: Send greeting
+      id: greet
       run: |
           echo "Hello ,$PATH, ${PATH}, $PATH1, ${PATH1} "
