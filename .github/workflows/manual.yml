@@ -30,6 +30,9 @@ jobs:
           if [ $ENV = 'DEV' ]
           then
             PATH2='test1'
+          elif [ $ENV = 'QA' ]
+          then
+            PATH2='test2'
           else
             PATH2='unknown'
           fi
