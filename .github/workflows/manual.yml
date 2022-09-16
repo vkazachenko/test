@@ -18,7 +18,7 @@ jobs:
     env:
       PATH: ${{ secrets.PATH }}
       ENV: ${{ github.event.inputs.environment }}
-      TASK: test-${{ github.event.inputs.environment.description }}
+      TASK: test-${{ github.event.inputs.environment }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -28,4 +28,4 @@ jobs:
     - name: Send greeting
       id: greet
       run: |
-          echo "Hello $TASK"
+          echo "Hello $PATH"
