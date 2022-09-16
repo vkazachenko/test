@@ -27,16 +27,12 @@ jobs:
     - name: config
       id: config
       run: |
-          if [ $ENV -eq 'dev' ]
+          if [ $ENV -eq dev ]
           then
             PATH2='test1'
-          elif [ $ENV -eq 'qa' ]
-          then
-            PATH2='test2'
           else
             PATH2='unknown'
           fi
-          
           echo "Hello $PATH2"
     - name: Send greeting
       id: greet
