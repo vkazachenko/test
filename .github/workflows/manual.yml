@@ -33,7 +33,7 @@ jobs:
           else
             PATH2='unknown'
           fi
-          echo "Hello $PATH2"
+          echo "Hello $PATH2 $ENV"
     - name: Send greeting
       id: greet
       run: |
