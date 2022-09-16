@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     env:
-      PATH: ${{ secrets.PATH }}
+      PATH: ${{ env.PATH }}
       ENV: ${{ github.event.inputs.environment }}
       TASK: test-${{ github.event.inputs.environment }}
     # The type of runner that the job will run on
